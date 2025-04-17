@@ -1,0 +1,12 @@
+Description: Vcs_tag is broken; it does nothing and version.h is not generated.
+Author: Nathan Pratta Teodosio <nteodosio@ubuntu.com>
+
+--- a/src/meson.build
++++ b/src/meson.build
+@@ -1,5 +1,5 @@
+ fs = import('fs')
+ 
+-if fs.exists('../.git')
++if false
+   vcs_tag(input: 'version.h.in', output: 'version.h')
+ else
